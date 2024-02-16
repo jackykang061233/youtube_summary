@@ -46,7 +46,7 @@ python3 main.py https://www.youtube.com/watch?v=ImrKxlLJCEY openai-key multi-spe
 ```
 總共有三個arguments
 * arg1(youtube-url): 要下載的youtube網址
-* arg2(api_key): openai的api-key
+* arg2(api_key): openai的api-key，這需要修改
 * arg3(prompt): 有兩種(預設為multi-speakers)
   1. multi-speakers
   2. single-speaker
