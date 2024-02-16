@@ -1,5 +1,4 @@
 from openai import OpenAI
-from dotenv import load_dotenv
 
 def load_text(id):
     with open(f"downloaded_videos/{id}.txt") as f: 
