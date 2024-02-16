@@ -1,7 +1,7 @@
 # 將youtube影片轉換成summary
 
 > [!NOTE]  
-> 可在google colab裡使用Example.ipynb檔案就好
+> 此專案需要下載較多packages以及使用較好的GPU，可在google colab裡使用Example.ipynb檔案就好
 ## installation
 必須要先下載Cython和FFMPEG
 
