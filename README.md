@@ -57,4 +57,4 @@ python3 main.py https://www.youtube.com/watch?v=ImrKxlLJCEY openai-key multi-spe
 下載的summary會儲存在summary資料夾，檔名為youtube影片id(網址中在watch?v=後的)
 
 ## acknowledgements
-Thanks to [whisper-diarization](https://github.com/MahmoudAshraf97/whisper-diarization)
+Thanks to [whisper-diarization](https://github.com/MahmoudAshraf97/whisper-diarization) for the audio to text part of the model
