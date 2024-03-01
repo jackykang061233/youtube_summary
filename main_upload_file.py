@@ -3,7 +3,7 @@ import subprocess
 import argparse
 
 def run_diarization_command(id):
-    command = ["python", "whisper-diarization/diarize_parallel.py", "-a", f"audio/{id}"]
+    command = ["python", "whisper-diarization/diarize_parallel.py", "-a", f"audio/{id}.m4a"]
     try:
         subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:

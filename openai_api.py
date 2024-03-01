@@ -5,7 +5,7 @@ def load_text(id, youtube):
       with open(f"downloaded_videos/{id}.txt") as f: 
           text = f.read()
     else:
-        with open(f"audio/{id}") as f: 
+        with open(f"audio/{id}.txt") as f: 
           text = f.read()
     return text
 
