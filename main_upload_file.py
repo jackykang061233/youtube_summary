@@ -2,8 +2,8 @@ from openai_api import call_openai_api
 import subprocess
 import argparse
 
-def run_diarization_command(id, language):
-    command = ["python", "whisper-diarization/diarize_parallel.py", "-a", f"audio/{id}", "--language", "chinese"]
+def run_diarization_command(id):
+    command = ["python", "whisper-diarization/diarize_parallel.py", "-a", f"audio/{id}"]
     try:
         subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:
