@@ -1,8 +1,12 @@
 from openai import OpenAI
 
-def load_text(id):
-    with open(f"downloaded_videos/{id}.txt") as f: 
-        text = f.read()
+def load_text(id, youtube):
+    if youtube:
+      with open(f"downloaded_videos/{id}.txt") as f: 
+          text = f.read()
+    else:
+        with open(f"audio/{id}") as f: 
+          text = f.read()
     return text
 
 def prompt(prompt_example):
@@ -14,7 +18,7 @@ def prompt(prompt_example):
     
     return text
 
-def call_openai_api(id, prompt_example, api_key):
+def call_openai_api(id, prompt_example, api_key, youtube=True):
     client = OpenAI(api_key=api_key)
     print("Connecting to openai...")
     response = client.chat.completions.create(
@@ -26,7 +30,7 @@ def call_openai_api(id, prompt_example, api_key):
         },
         {
           "role": "user",
-          "content": load_text(id)
+          "content": load_text(id, youtube)
         }
       ],
       temperature=0.0,

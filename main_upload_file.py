@@ -1,10 +1,9 @@
-from download_video import download_video
 from openai_api import call_openai_api
 import subprocess
 import argparse
 
-def run_diarization_command(id):
-    command = ["python", "whisper-diarization/diarize_parallel.py", "-a", f"audio/{id}"]
+def run_diarization_command(id, language):
+    command = ["python", "whisper-diarization/diarize_parallel.py", "-a", f"audio/{id}", "--language", "chinese"]
     try:
         subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:
@@ -21,7 +20,7 @@ if __name__ == '__main__':
 
     id = args.file_name
     run_diarization_command(id)
-    call_openai_api(id, args.prompt, args.api_key)
+    call_openai_api(id, args.prompt, args.api_key, youtube=False)
 
 
     # url = "https://www.youtube.com/watch?v=ImrKxlLJCEY"
