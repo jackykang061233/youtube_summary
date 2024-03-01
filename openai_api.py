@@ -13,6 +13,9 @@ def prompt(prompt_example):
     if prompt_example == "multi-speakers":
         with open("prompt/multiple_speakers.txt") as f: 
             text = f.read()
+    elif prompt_example == "chinese":
+        with open("prompt/chinese.txt") as f: 
+            text = f.read()
     else:
         text = "Write a concise summary of the following text:"
     
